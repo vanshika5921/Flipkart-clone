@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <link href="style.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+</head>
+<body>
+
+    <div id ="nav">
+            <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvVqNgAJxG-4iH9xEgNJMXui2fbzcKkDEhg&usqp=CAU">
+            
+            <input type="text" placeholder="Search for Products, Brands and More">
+        </div>
+        
+        <div>
+            <img src="data:image/png;base64,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">
+            <p><a href="#">Login</a></p>
+        </div>
+        <div>
+            <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg">
+            <p><a href="#">Cart</a></p>
+        </div>
+        <div>
+            <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg">
+            <p><a href="#">Become a seller</a></p>
+        </div>
+
+        <div>
+            <button>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAAD8/PwEBAT4+Pji4uLY2Nj19fUeHh7V1dWlpaXFxcXy8vIXFxdXV1d+fn5mZmZgYGBPT0/q6up4eHg9PT2rq6u5ubknJycvLy9wcHCTk5O6urqfn597e3uFhYUzMzNFRUWNjY1BQUEQEBB83V7GAAAEU0lEQVR4nO2d23aqMBCGwySgCB5RPLXbnt7/GXcSQLHQeBH3ys70/+xqXfZm/jVh0DkpBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT4hCW/BP4a2OM0T2aKb77SHRTNd1Tt2LPCDzyLdHI0+aX8l8URCnI6ulVJfkirQyFxkjiUTFoROX3J688lEoXvrq5NWNy9B2PQMbTmY9593xh4EXTczMO58NmTF4A0Ci3BmB4woTFuHmMq6tYRG/D0U1Nyd03If6xSK0ff6cf7gEr04MbaAv6s2hUP9nnoe20JfU7cIkqUNb6MvMKU+rX4e20Jely4fmNjkNbaEvq0enNAltoS/rB/r4K5TRKzyx96Ez0hgOoS30Zf/jm+6WbWgLfal++mzYsQ9toS+0cajT2o9paAu9qV0OlPEfUiEmU+chzULb5wspHWvGkhht/Ik/GaUVKv3GTQ4DqjSyD1X8n/G1gupr5I7RvFDEX6zRApXIjmM3RWnvFCx8SCL7Gr0pzpqSBgP0QT3dTmb3bBd9/qKHIlVPb+LMkZ1/lIqF+yzK5PbLenE7n7tzKljVD6n5qfaX03q9Ws6yiWBzCVpIDG4KRKxqwAAAAAAAAAAAAADg/4BGModjr8WLGmQTleCVTRzPCDMoytxQ4prVl229dH4pGQkUolr1KjPtHy6Vma66NgaHTn0TTNwV0vgLUDrImF52xlXuh50KoS305XG3SfQS2XcM/YKur0ede4foO/f4d1/y76B1d0FLBl3Qzk52Kz60hb7wn0bgP1GyYq/wD/vJLv7TefwnLNlPyZI4u10Y/aQziWrKfFqduG8c0Paz3xpBgvfmD/7bWxq+b+CRjDbwNNxtUZLdE0ZblO43YbVBh9cmLPPI7raZbZhtM2O/ke438Tu89jtUAgAAAAAAAAAAHGn3YlCvPb9ZBsKNfv6QSAW05PkQtTnTl/r1dbbPlWCWTLRqKPt4axvav46nYmKmMEIb9jSM/9Jr+1eb1GfQ4t3QRBk1Us1fVUzijVFQDjujpEzeMw5Xo3VSuRmpkJoSVMrjpBK9J8NpBDugcMzil0hdR81AoVW9CG3fEyBRDIPMjTMDHwpHs752bBXaQl/cLtTn9CO0hb4QPWih3UXvxNIlzzSdRN/Y9uL0oL4QL7HHmgdfM5Mkn6Et9OXBNwfI+DvZV665J8lBoXvewogPbaEv7m9hsQojjzRb9yll4EN3I7uWuAltoS+5a/7Q9mCGttCXcnxZ+U1i7O9pTKu+w4cy2UxCm+hN7rwQzeb5yFGu+TyZHKLfi0EkUtfKgSJ2gTYd6tg5cIo/E2W5NEFlGHLWiklqn5a9GYTeRbibcFn41SQU5Z06zXZiKzahrXsKJIrN90N6qJXdXhPatqdgTuJkdr8r6pK2ZUVOFMuNVSk/TzUP133DjCKmWZ7nafQJxHH6ixJ5BNAxWo1c9VHnO64CAQAAAAAAAAAAAAAAAAAAAGP+AmkxI0VDlS+VAAAAAElFTkSuQmCC">
+            </button>
+        </div>
+    </div>
+    <div id="a"></div>
+
+    <div id="menu">
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/38a459d6d1fc930a.png?q=100">
+            <p>Mobile & Tablets</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/629b0a6f61037ae6.png?q=100">
+            <p>TV & Electronics</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/f2802fac96dffea9.png?q=100">
+            <p>Appliances</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/74f0eb6cc10e2743.png?q=100">
+            <p>Fashion</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/f925cfe5ecdf6acf.png?q=100">
+            <p>Beauty</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/38d4fbb64c70a3ff.png?q=100">
+            <p>Home & Kitchen</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/fef14e08ec83a6d7.png?q=100">
+            <p>Furniture</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/83de409bda2f3834.png?q=100">
+            <p>Flights</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/711174cfe1d2fa75.png?q=100">
+            <p>Grocery</p>
+        </div>
+    </div>
+    
+    <div class="offers">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/60c8b0e070db8e63.jpg?q=20">
+    </div>
+
+    <div class="offers">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/140/image/cecebca2292c7948.jpg?q=20">
+    </div>
+
+    <div id="bestmobile">
+        <div>
+        <div id="best-mob-head">
+            <h3>Best Mobile</h3>
+        </div>
+        <div id="a1">
+            <div>
+                <img src="./resource/a1.png">
+                <p>Nohting Phone 2</p>
+                <b>incl of offers</b>
+            </div>
+            <div>
+                <img src="./resource/a2.png">
+                <p>Motorola Edge 40</p>
+                <b>incl of offers</b>
+            </div>
+            <div>
+                <img src="./resource/a3.png">
+                <p>Google Pixel</p>
+                <b>incl of offers</b>
+            </div>
+            <div>
+                <img src="./resource/a4.png">
+                <p>Motorola G84 5G</p>
+                <b>incl of offers</b>
+            </div>
+            <div>
+                <img src="./resource/a5.png">
+                <p>Samsung S21 5G</p>
+                <b>incl of offers</b>
+            </div>
+            <!-- <div>
+                <img src="./resource/a6.png">
+                <p>Redmi Note 12 Pro</p>
+                <b>incl of offers</b>
+            </div> -->
+        </div>
+        </div>
+        <div id="a2">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/530/810/image/00cb1682473f22f2.jpeg?q=20">
+        </div>
+    </div>
+
+    <div class="deals">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/8bc07230b5ef20f4.jpg?q=20">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/93c68a7eadd552e6.png?q=20">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/3a0f369e4b2ef15a.jpg?q=20">
+    </div>
+
+    <div id="b">
+        <div id="b1">
+            <p>Women's Favourites</p>
+            <div>
+            <div>
+                <img src="./resource/b1.png">
+                <p>Women's Kurtas</p>
+                <b>Min. 50% Off</b>
+            </div>
+            <div>
+                <img src="./resource/b2.png">
+                <p>Women's Sarees</p>
+                <b>Min. 40% Off</b>
+            </div>
+            </div>
+            <div>
+            <div>
+                <img src="./resource/b3.png">
+                <p>Women's Ethnic Sets</p>
+                <b>Min. 60% Off</b>
+            </div>
+            <div>
+                <img src="./resource/b4.png">
+                <p>Sarees</p>
+                <b>Min. 70% Off</b>
+            </div>
+            </div>
+        </div>
+        <div id="b2">
+            <img src="./resource/b11.png">
+        </div>
+    </div>
+
+    <div class="deals">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/8bc07230b5ef20f4.jpg?q=20">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/93c68a7eadd552e6.png?q=20">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/3a0f369e4b2ef15a.jpg?q=20">
+    </div>
+
+    <div class="deals">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/6d2168bf4c2ba7cb.jpg?q=20">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/a2e27353c63b990b.jpg?q=20">
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/aa9eeaceadb02e7c.jpg?q=20">
+    </div>
+
+    <div id="para">
+        <p>
+            <b>Top Stories: Brand Directory</b><br> <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veritatis corporis voluptas laborum minima! Quos magni dolore distinctio optio fugit, quis illo ipsa corrupti doloremque consequatur dicta aspernatur id numquam.
+            Modi nemo voluptatem beatae repellendus distinctio iure iste? At incidunt quo adipisci dolorum corrupti soluta magni asperiores dolorem natus, possimus sunt, eaque culpa explicabo nemo voluptatibus error distinctio magnam accusamus?<br>
+            Odit vel doloremque quo temporibus cupiditate odio quidem inventore nihil dignissimos. Culpa alias possimus illum error, eligendi accusamus similique. Reprehenderit unde culpa non quas illo repudiandae at commodi quasi provident.
+            Incidunt laboriosam, aliquam animi et quod saepe facere ipsa magnam, praesentium eaque architecto quia tempora culpa mollitia nihil voluptas aperiam amet doloremque distinctio dolorem reiciendis, maiores ullam laudantium. Assumenda, facere! <br>
+            Rem suscipit voluptas enim accusamus, sed ex error, itaque voluptate ullam dolorem corporis vitae at adipisci quae praesentium nostrum facere quaerat placeat iste labore culpa aliquid impedit? Id, odio repellat?
+            Itaque aliquam voluptates libero inventore rerum! Obcaecati natus enim quas officia delectus voluptas minus, repudiandae cupiditate mollitia harum quos illum totam perferendis nesciunt iure quis facere in ratione ad alias? <br>
+            Eveniet optio ipsum dolores doloremque ad voluptatem molestias dolorum recusandae suscipit atque dicta voluptate, corporis asperiores soluta amet sequi voluptates tenetur? Ut dicta tempora repellendus amet ratione asperiores tempore quia!
+            Nesciunt repudiandae quisquam voluptatem culpa magnam qui nisi ratione? Ratione, assumenda? Temporibus quo at eum animi natus nobis, reprehenderit quasi fuga dolorum, officia facere obcaecati possimus saepe, libero nam sint? <br>
+            Debitis, explicabo repellendus porro et magni temporibus obcaecati reiciendis quae aut eos sequi illo eaque nisi fuga ab. Dolorum fugiat veritatis modi ducimus. Distinctio aspernatur pariatur eius, ipsa sequi soluta.
+            Id cumque nulla iste et laudantium distinctio sequi facilis eveniet, dolore, corrupti, aliquid magnam suscipit reprehenderit sunt esse repellat aperiam. Aliquam nihil modi odit dolorum veritatis, sed vitae rerum deserunt. <br>
+            <br>
+            <b>Flipkat: The one stop shopping destination</b><br><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis tempora vitae porro quas, voluptates, ex dicta repellendus minus hic fugit quam earum corrupti, officiis quibusdam iure mollitia eligendi minima dolore.
+            Perferendis recusandae, eaque ad amet neque distinctio cupiditate reprehenderit, saepe nobis optio atque nesciunt totam esse nemo tempore earum maxime sit natus? Cum, corporis quas? Hic molestiae quisquam commodi quas.
+            Ipsum rerum, ab adipisci laboriosam recusandae officia nihil consectetur. Architecto facilis quae consequatur adipisci laudantium laborum similique recusandae. Ab accusamus illum laboriosam minima quasi itaque ea voluptatum explicabo? Voluptatem, nihil.
+            <br>
+            <br>
+            <b>Flipkart plus</b> <br> <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloribus libero perspiciatis corporis eius eligendi beatae hic, perferendis nostrum velit fuga, repudiandae quisquam porro sapiente reprehenderit dicta incidunt. Vero, voluptates?
+            Quod, iusto dolor earum neque nisi magnam atque laboriosam quam at repellat asperiores repellendus harum eius, distinctio mollitia vel numquam dolore. Numquam quia ipsa, recusandae laborum id explicabo iste sint?
+            Ea, minima. Ducimus, natus! Corrupti numquam voluptas, eos impedit ipsa optio at voluptatibus est fuga ipsum dolor doloremque eum, consectetur molestias vitae ut distinctio a necessitatibus voluptates dolore, facilis dolorem.
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae mollitia, nemo eligendi quas ducimus error quo accusantium perspiciatis dolore inventore voluptatibus ratione facilis sunt. Placeat consequatur ipsum ut mollitia inventore.
+            In corrupti dolor molestias quae impedit. Maiores fugiat deleniti assumenda possimus dicta ab. Perferendis nostrum deleniti sequi, veritatis rerum ex ipsam nisi non corporis inventore, eveniet, ea ut illo corrupti!
+            Vitae, provident sunt repellendus architecto corrupti fugiat labore quo excepturi blanditiis incidunt asperiores sequi neque maxime perspiciatis earum expedita rerum. Minima ut distinctio eaque, voluptas unde in amet voluptatem dolore.
+            Laboriosam quos assumenda dolorum consequatur ipsa aut nostrum quibusdam veniam quam a, labore maiores, culpa, quod quas dolorem minima tempora quasi expedita? Explicabo perspiciatis eum optio recusandae eligendi, ullam laboriosam?
+        </p>
+    </div>
+
+    <footer>
+
+        <div>
+        <div id="f1">
+        <div>
+            <p>ABOUT</p>
+            <br/>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Flipkart Stories</a>
+            <a href="#">Press</a>
+            <a href="#">Flipkart Wholesale</a>
+            <a href="#">Cleartip</a>
+            <a href="#">Coporate information</a>
+        </div>
+
+        <div>
+            <p>HELP</p>
+            <br/>
+            <a href="#">Payments</a>
+            <a href="#">Shipping</a>
+            <a href="#">Cancellations and returns</a>
+            <a href="#">FAQ</a>
+            <a href="#">Report Infringement</a>
+        </div>
+
+        <div>
+            <p>CONSUMER POLICY</p>
+            <br>
+            <div>
+                <a href="#">Cancellations and Returns</a>
+                <a href="#">Terms Of Use</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Grievance Redressal</a>
+                <a href="#">EPR Compilance</a>            
+            </div>
+
+        </div>
+
+        <div>
+            <p>SOCIAL</p>
+            <br>
+            <div>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Youtube</a>            
+            </div>
+        </div>
+        </div>
+
+        <div id="vr">
+
+        </div>
+
+        <div id="f3">
+        <div>
+            <p>Mail Us:</p>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet lorem
+                    Voluptas reiciendis quod ipsum
+                    Beatae, laudantium magnam ipsam cum
+                    Animi error repudiandae
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <p>Registered Office Address</p>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet 
+                    Iusto ab fugiat nisi tenetu
+                    Libero dicta sunt possimus
+                    Error, minima possimus <br>
+                    CIN : 0000000000000000000 <br>
+                    Telephone: 000-00000000
+                </p>                
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <hr>
+
+        
+        <div id="f2">
+            
+            <div>
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/sell-image-9de8ef.svg">
+                <p><a href="#">Become a Seller</a></p>
+            </div>
+
+            <div>
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/advertise-image-866c0b.svg">
+                <p><a href="#">Adevertise</a></p>
+            </div>
+
+            <div>
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/gift-cards-image-d7ff24.svg">
+                <p><a href="#">Gift Cards</a></p>
+            </div>
+
+            <div>
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/help-centre-image-c4ace8.svg">
+                <p><a href="#">Help Centre</a></p>
+            </div>
+            <div>
+                <p>&#169 Copyright 0000-0000</p>
+            </div>
+            <div>
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/payment-method-c454fb.svg">
+            </div>
+
+        </div>
+
+        
+    </footer>
+
+</body>
+</html>
